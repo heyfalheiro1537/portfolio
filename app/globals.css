@@ -5,18 +5,22 @@
 
 :root {
   /* Updated theme to match minimalist portfolio design with dark navy background and clean typography */
-  --background: oklch(0.12 0.02 240); /* Deep navy blue */
-  --foreground: oklch(0.92 0.01 240); /* Light blue-white */
-  --card: oklch(0.15 0.02 240); /* Slightly lighter navy */
+  --background: oklch(0.12 0.02 240);
+  /* Deep navy blue */
+  --foreground: oklch(0.92 0.01 240);
+  /* Light blue-white */
+  --card: oklch(0.15 0.02 240);
+  /* Slightly lighter navy */
   --card-foreground: oklch(0.92 0.01 240);
   --popover: oklch(0.15 0.02 240);
   --popover-foreground: oklch(0.92 0.01 240);
-  --primary: oklch(0.65 0.15 180); /* Teal accent */
+  --primary: oklch(89.379% 0.16632 176.61 / 0.696);
+  /* Teal accent */
   --primary-foreground: oklch(0.12 0.02 240);
   --secondary: oklch(0.2 0.02 240);
   --secondary-foreground: oklch(0.85 0.01 240);
   --muted: oklch(0.18 0.02 240);
-  --muted-foreground: oklch(0.65 0.01 240);
+  --muted-foreground: oklch(100% 0.00011 271.152);
   --accent: oklch(0.65 0.15 180);
   --accent-foreground: oklch(0.12 0.02 240);
   --destructive: oklch(0.577 0.245 27.325);
@@ -32,12 +36,12 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.15 0.02 240);
   --sidebar-foreground: oklch(0.92 0.01 240);
-  --sidebar-primary: oklch(0.65 0.15 180);
+  --sidebar-primary: oklch(89.491% 0.1643 178.356);
   --sidebar-primary-foreground: oklch(0.12 0.02 240);
   --sidebar-accent: oklch(0.2 0.02 240);
   --sidebar-accent-foreground: oklch(0.85 0.01 240);
   --sidebar-border: oklch(0.25 0.02 240);
-  --sidebar-ring: oklch(0.65 0.15 180);
+  --sidebar-ring: oklch(89.491% 0.1643 178.356);
 }
 
 .light {
@@ -108,6 +112,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

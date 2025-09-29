@@ -1,43 +1,83 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 export function AnimatedBackground() {
-    const canvasRef = useRef<HTMLCanvasElement>(null)
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const thpaceInstanceRef = useRef<any>(null);
 
     useEffect(() => {
-        const loadThpace = async () => {
+        let resizeObserver: ResizeObserver | null = null;
+        let rafId: number | null = null;
+
+        const setupCanvasSize = (canvas: HTMLCanvasElement) => {
+            // Match canvas bitmap to CSS size * DPR for crisp rendering
+            const dpr = window.devicePixelRatio || 1;
+            const { width, height } = canvas.getBoundingClientRect();
+            const nextW = Math.max(1, Math.round(width * dpr));
+            const nextH = Math.max(1, Math.round(height * dpr));
+            if (canvas.width !== nextW) canvas.width = nextW;
+            if (canvas.height !== nextH) canvas.height = nextH;
+        };
+
+        const init = async () => {
             try {
-                const { ThpaceGL } = await import("thpace")
+                const { ThpaceGL } = await import("thpace");
 
-                if (canvasRef.current) {
-                    const settings = {
-                        colors: ['rgba(71, 75, 82, 1)', '#30275fff', '#0c334cff'],
-                        triangleSize: 100,
-                        pointAnimationSpeed: 3600,
-                        bleed: 40,
-                        noise: 100,
-                        animationOffset: 400,
-                        pointVariationY: 50
+                const canvas = canvasRef.current;
+                if (!canvas) return;
 
+                // Ensure initial size before creating the effect
+                setupCanvasSize(canvas);
+
+                const settings = {
+                    colors: ["rgba(219, 99, 2, 1)", "rgba(56, 2, 57, 1)", "rgba(159, 18, 53, 0.8)"],
+                    triangleSize: 130,
+                    pointAnimationSpeed: 3600,
+                    bleed: 40,
+                    noise: 100,
+                    animationOffset: 200,
+                    pointVariationY: 50,
+                };
+
+                // Some libs need creation deferred to next frame after layout
+                rafId = requestAnimationFrame(() => {
+                    thpaceInstanceRef.current = ThpaceGL.create(canvas, settings);
+                });
+
+                // Keep canvas crisp on resize
+                resizeObserver = new ResizeObserver(() => {
+                    setupCanvasSize(canvas);
+                    // If the lib has a resize API, call it; otherwise recreate or let it adapt.
+                    if (thpaceInstanceRef.current?.resize) {
+                        thpaceInstanceRef.current.resize();
                     }
-
-                    ThpaceGL.create(canvasRef.current, settings)
-                }
+                });
+                resizeObserver.observe(canvas);
             } catch (error) {
-                console.error("Failed to load ThpaceGL:", error)
+                console.error("Failed to load ThpaceGL:", error);
             }
-        }
+        };
 
-        loadThpace()
-    }, [])
+        init();
+
+        return () => {
+            if (rafId != null) cancelAnimationFrame(rafId);
+            if (resizeObserver) resizeObserver.disconnect();
+            // Clean up effect if API exists
+            try {
+                thpaceInstanceRef.current?.destroy?.();
+                thpaceInstanceRef.current = null;
+            } catch { }
+        };
+    }, []);
 
     return (
         <canvas
             ref={canvasRef}
             id="make-me-cool"
-            className="absolute inset-0 -z-10 opacity-100"
+            className="absolute inset-0 -z-10"
             style={{ pointerEvents: "none" }}
         />
-    )
+    );
 }
