@@ -4,10 +4,11 @@ import { About } from "@/components/about"
 import { Experience } from "@/components/experience"
 import { Projects } from "@/components/projects"
 import { Contact } from "@/components/contact"
-
+import { AnimatedBackground } from "@/components/animated-background"
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
+      <AnimatedBackground />
       <Navigation />
       <main>
         <Hero />
