@@ -4,13 +4,13 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left side - Name and title */}
           <div>
-            <h1 className="text-5xl lg:text-6xl font-light text-balance mb-6">Your Name</h1>
-            <p className="text-xl text-muted-foreground mb-8 font-light">Frontend Developer</p>
+            <h1 className="text-5xl lg:text-6xl font-light text-balance mb-6 mt-10">Heyder Falheiro</h1>
+            <p className="text-xl text-muted-foreground mb-8 font-light">Software Developer</p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
-              I build accessible, pixel-perfect digital experiences for the web.
+              Just another computer enthusiast
             </p>
 
             {/* Social links */}

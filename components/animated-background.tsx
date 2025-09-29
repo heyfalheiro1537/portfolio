@@ -31,10 +31,10 @@ export function AnimatedBackground() {
                 setupCanvasSize(canvas);
 
                 const settings = {
-                    colors: ["rgba(219, 99, 2, 1)", "rgba(56, 2, 57, 1)", "rgba(159, 18, 53, 0.8)"],
-                    triangleSize: 130,
-                    pointAnimationSpeed: 3600,
-                    bleed: 40,
+                    colors: ["rgba(255, 115, 0, 1)", "rgba(56, 2, 57, 1)", "rgba(159, 18, 53, 0.8)"],
+                    triangleSize: 150,
+                    pointAnimationSpeed: 7200,
+                    bleed: 60,
                     noise: 100,
                     animationOffset: 200,
                     pointVariationY: 50,
