@@ -7,9 +7,7 @@ export function Contact() {
         <h2 className="text-3xl font-light mb-8 text-balance">Get In Touch</h2>
 
         <p className="text-muted-foreground leading-relaxed mb-12 text-balance">
-          {
-            "Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!"
-          }
+          I'm actively seeking new opportunities in the AI field. My inbox is always open—whether you have a question, a project idea, or just want to connect, feel free to reach out. I'll do my best to respond promptly!
         </p>
 
         <Button

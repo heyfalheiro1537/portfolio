@@ -7,31 +7,40 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              {
-                "Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I've had the privilege of building software for an"
-              }{" "}
-              <span className="text-accent">advertising agency</span>
-              {", a"} <span className="text-accent">start-up</span>
-              {", a"} <span className="text-accent">huge corporation</span>
-              {", and a"} <span className="text-accent">digital product studio</span>
-              {"."}
+              <>
+                In 2022, I set out on the challenge of joining one of the{" "}
+                <span className="text-accent">most prestigious colleges in Brazil</span>.
+                That journey shaped me, but it doesn’t define me entirely.
+              </>
             </p>
             <p>
-              {"My main focus these days is building accessible, inclusive products and digital experiences at"}{" "}
-              <span className="text-accent">Upstatement</span>
-              {
-                " for a variety of clients. I most enjoy working on projects that challenge me to learn something new and push me to grow as a developer."
-              }
+              <>
+
+                Alongside being an{" "}
+                <span className="text-accent">engineering student at ITA</span>, I’ve been{" "}
+                <span className="text-accent">president of the school band</span>, started my first{" "}
+                <span className="text-accent">full-time role at VTEX</span> as a field software engineer,
+                competed in hackathons, volunteered for three years at a prep school for low-income students,
+                and became one of the first developers at{" "}
+                <span className="text-accent">Selvia AI Medical Accounting</span>.
+              </>
             </p>
             <p>
-              {
-                "When I'm not at the computer, I'm usually rock climbing, hanging out with my wife and two cats, or running around Hyrule searching for"
-              }{" "}
-              <span className="text-accent">Korok seeds</span>
-              {"."}
+              <>
+                Today, I’m deeply curious about{" "}
+                <span className="text-accent">how LLMs work</span>—studying algorithms and architectures
+                to push my understanding further and bring new projects to life.
+              </>
+            </p>
+            <p>
+              <>
+                Outside of work, I enjoy <span className="text-accent">cooking</span>,
+                playing <span className="text-accent">roguelike games</span>,
+                and trying to finally beat{" "}
+                <span className="text-accent">Super Meat Boy</span>.
+              </>
             </p>
           </div>
-
           <div>
             <h3 className="text-lg font-medium mb-6">Technologies I work with:</h3>
             <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
@@ -58,6 +67,30 @@ export function About() {
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
                 Tailwind CSS
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                Python
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                SQL
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                MongoDB
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                AWS
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                LangChain
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                LangGraph
               </div>
             </div>
           </div>

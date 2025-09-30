@@ -1,17 +1,9 @@
 import { ExternalLink, Github } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { ZoomableImage } from "./ui/image"
 
 const projects = [
-  {
-    title: "Build a Spotify Connected App",
-    description:
-      "A comprehensive course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.",
-    image: "/spotify-app-interface.jpg",
-    technologies: ["React", "Node.js", "Express", "Spotify API"],
-    github: "https://github.com",
-    external: "https://buildaspotifyapp.com",
-    featured: true,
-  },
+
   {
     title: "Halcyon Theme",
     description:
@@ -20,6 +12,16 @@ const projects = [
     technologies: ["VS Code", "Sublime Text", "Atom", "iTerm2"],
     github: "https://github.com",
     external: "https://halcyon-theme.netlify.app",
+    featured: true,
+  },
+  {
+    title: "Concrete Notebooks",
+    description:
+      "A curated set of interactive notebooks designed to bridge the gap between concrete concepts and practical coding, helping students overcome common learning bottlenecks in concrete.",
+    image: "/image1.png",
+    technologies: ["MatLab", "LiveScript"],
+    github: "https://github.com/heyfalheiro1537/Concreto",
+    external: "https://colab.research.google.com/drive/1DuMz66eosCsGEcu4_zsOIsvyrDcvhoaB?usp=sharing",
     featured: true,
   },
   {
@@ -49,7 +51,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-24 px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-light mb-16 text-balance">Some Things I've Built</h2>
 
         {/* Featured Projects */}
@@ -58,14 +60,9 @@ export function Projects() {
             <div key={project.title} className="group">
               <div className={`grid lg:grid-cols-12 gap-8 items-center ${index % 2 === 1 ? "lg:text-right" : ""}`}>
                 <div className={`lg:col-span-7 ${index % 2 === 1 ? "lg:col-start-6" : ""}`}>
-                  <div className="relative">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full rounded-lg opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                    />
-                    <div className="absolute inset-0 bg-accent/20 group-hover:bg-transparent transition-colors duration-300 rounded-lg"></div>
-                  </div>
+
+                  <ZoomableImage project={{ title: project.title, image: project.image }} />
+
                 </div>
 
                 <div className={`lg:col-span-5 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""} space-y-4`}>

@@ -2,15 +2,15 @@ import { Github, Linkedin, Mail } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-8">
+    <section className="min-h-screen flex items-center justify-left px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-left">
           {/* Left side - Name and title */}
           <div>
             <h1 className="text-5xl lg:text-6xl font-light text-balance mb-6 mt-10">Heyder Falheiro</h1>
-            <p className="text-xl text-muted-foreground mb-8 font-light">Software Developer</p>
+            <p className="text-xl text-muted-foreground mb-6 font-light">Software Developer</p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
-              Just another computer enthusiast
+              Just another enthusiast
             </p>
 
             {/* Social links */}
@@ -40,7 +40,7 @@ export function Hero() {
           </div>
 
           {/* Right side - Bio */}
-          <div className="text-muted-foreground leading-relaxed space-y-6">
+          {/* <div className="text-muted-foreground leading-relaxed space-y-6">
             <p>
               {
                 "I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability."
@@ -60,7 +60,7 @@ export function Hero() {
               {". Additionally, I also released a"} <span className="text-accent">comprehensive video course</span>
               {" a few years ago, guiding learners through building a web app with the Spotify API."}
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
