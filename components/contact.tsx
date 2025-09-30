@@ -16,7 +16,7 @@ export function Contact() {
           size="lg"
           className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
         >
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=heyfalheiro@gmail.com&su=Hello&body=Hi Heyder,"
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=heyfalheiro@gmail.com&su=Hello"
           >Say Hello</a>
         </Button>
       </div>

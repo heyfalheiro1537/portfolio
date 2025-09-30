@@ -30,7 +30,7 @@ export function Hero() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=heyfalheiro@gmail.com&su=Hello&body=Hi Heyder,"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=heyfalheiro@gmail.com&su=Hello"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors"
