@@ -5,14 +5,13 @@ import { ZoomableImage } from "./ui/image"
 const projects = [
 
   {
-    title: "Halcyon Theme",
+    title: "AirData",
     description:
-      "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-    image: "/code-editor-dark-theme.png",
-    technologies: ["VS Code", "Sublime Text", "Atom", "iTerm2"],
-    github: "https://github.com",
-    external: "https://halcyon-theme.netlify.app",
-    featured: true,
+      "Artificial Intelligence for Aviation Data Analysis, focusing on the development of a data storage and analysis system for the Brazilian civil aviation sector.",
+    image: "/AirData-logo_1.png",
+    technologies: ["LangGraph", "Ollama", "ChromaDB"],
+    external: "https://www.airdata.ita.br/",
+    featured: false,
   },
   {
     title: "Concrete Notebooks",
@@ -25,22 +24,20 @@ const projects = [
     featured: true,
   },
   {
-    title: "Integrating Algolia Search",
+    title: "Arduino Anti-Panic Device",
     description:
-      "Building a custom search experience with Algolia and its React library. Includes custom styling, filters, pagination, and more.",
+      "Device to support individuals experiencing panic attacks, combining breathing guidance with emergency alert features to assess the need for specialized intervention",
     image: "/search-interface.jpg",
-    technologies: ["Algolia", "React", "Gatsby"],
-    external: "https://algolia-search-demo.netlify.app",
+    technologies: ["Arduino", "C++"],
     featured: false,
   },
   {
-    title: "OctoProfile",
+    title: "River Forecast MLP",
     description:
       "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and more.",
     image: "/github-profile-dashboard.jpg",
-    technologies: ["React", "GitHub API", "Chart.js"],
-    github: "https://github.com",
-    external: "https://octoprofile.vercel.app",
+    technologies: ["Matlab"],
+    github: "https://github.com/heyfalheiro1537/riverflow-forecast-mlp",
     featured: false,
   },
 ]
@@ -56,7 +53,9 @@ export function Projects() {
 
         {/* Featured Projects */}
         <div className="space-y-24 mb-24">
+
           {featuredProjects.map((project, index) => (
+
             <div key={project.title} className="group">
               <div className={`grid lg:grid-cols-12 gap-8 items-center ${index % 2 === 1 ? "lg:text-right" : ""}`}>
                 <div className={`lg:col-span-7 ${index % 2 === 1 ? "lg:col-start-6" : ""}`}>
@@ -69,9 +68,16 @@ export function Projects() {
                   <p className="text-accent text-sm font-mono">Featured Project</p>
                   <h3 className="text-2xl font-medium text-balance">{project.title}</h3>
 
-                  <Card className="p-6 bg-card/50 backdrop-blur-sm">
-                    <p className="text-muted-foreground leading-relaxed">{project.description}</p>
-                  </Card>
+                  <a
+                    href={project.external ? project.external : project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Card className="p-6 bg-card/50 backdrop-blur-sm transition delay-30 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                      <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                    </Card>
+                  </a>
 
                   <div className={`flex flex-wrap gap-2 ${index % 2 === 1 ? "lg:justify-end" : ""}`}>
                     {project.technologies.map((tech) => (
@@ -87,6 +93,8 @@ export function Projects() {
                         href={project.github}
                         className="text-muted-foreground hover:text-accent transition-colors"
                         aria-label="GitHub"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <Github size={20} />
                       </a>
@@ -96,6 +104,8 @@ export function Projects() {
                         href={project.external}
                         className="text-muted-foreground hover:text-accent transition-colors"
                         aria-label="External Link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <ExternalLink size={20} />
                       </a>
@@ -114,25 +124,39 @@ export function Projects() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((project) => (
               <Card key={project.title} className="p-6 group hover:bg-card/80 transition-colors">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <ExternalLink size={20} className="text-accent" />
-                  </div>
-                  <div className="flex gap-3">
+
+                <div className="flex items-center justify-between">
+                  {/* título à esquerda */}
+                  <h4 className="text-lg font-medium mt-1 group-hover:text-accent transition-colors">
+                    {project.title}
+                  </h4>
+
+                  {/* ícones à direita */}
+                  <div className="flex items-center gap-2">
                     {project.github && (
-                      <a href={project.github} className="text-muted-foreground hover:text-accent transition-colors">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                      >
                         <Github size={18} />
                       </a>
                     )}
                     {project.external && (
-                      <a href={project.external} className="text-muted-foreground hover:text-accent transition-colors">
+                      <a
+                        href={project.external}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                      >
                         <ExternalLink size={18} />
                       </a>
                     )}
                   </div>
                 </div>
 
-                <h4 className="text-lg font-medium mb-3 group-hover:text-accent transition-colors">{project.title}</h4>
+
 
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
 
@@ -143,6 +167,7 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
+
               </Card>
             ))}
           </div>

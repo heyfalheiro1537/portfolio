@@ -76,7 +76,7 @@ export function AnimatedBackground() {
         <canvas
             ref={canvasRef}
             id="make-me-cool"
-            className="absolute inset-0 -z-10"
+            className="absolute inset-0 -z-10 min-w-100"
             style={{ pointerEvents: "none" }}
         />
     );

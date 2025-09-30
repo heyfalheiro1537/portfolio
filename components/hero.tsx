@@ -16,21 +16,21 @@ export function Hero() {
             {/* Social links */}
             <div className="flex gap-6">
               <a
-                href="https://github.com"
+                href="https://github.com/heyfalheiro1537"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/heyderfalheiro/"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:heyfalheiro@gmail.com"
                 className="text-muted-foreground hover:text-accent transition-colors"
                 aria-label="Email"
               >

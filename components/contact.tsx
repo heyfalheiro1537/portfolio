@@ -16,7 +16,7 @@ export function Contact() {
           size="lg"
           className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
         >
-          <a href="mailto:hello@example.com">Say Hello</a>
+          <a href="mailto:heyfalheiro@gmail.com">Say Hello</a>
         </Button>
       </div>
 

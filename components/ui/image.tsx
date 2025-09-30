@@ -12,7 +12,6 @@ export function ZoomableImage({ project }: { project: Project }) {
             {/* Imagem normal */}
             <div className="relative transition delay-30 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer" onClick={() => {
                 setIsOpen(true);
-                console.log("Clicou!");
             }}>
                 <img
                     src={project.image || "/placeholder.svg"}
