@@ -3,20 +3,50 @@ import { Card } from "@/components/ui/card"
 import { ZoomableImage } from "./ui/image"
 
 const projects = [
-
   {
     title: "AirData",
     description:
-      "Artificial Intelligence for Aviation Data Analysis, focusing on the development of a data storage and analysis system for the Brazilian civil aviation sector.",
+      "An AI-powered platform for aviation data analysis, developing a comprehensive storage and analysis system for Brazil's civil aviation sector.",
     image: "/AirData-logo_1.png",
     technologies: ["LangGraph", "Ollama", "ChromaDB"],
     external: "https://www.airdata.ita.br/",
     featured: false,
   },
   {
-    title: "Concrete Notebooks",
+    title: "PanOptic Billing Dashboard",
     description:
-      "A curated set of interactive notebooks designed to bridge the gap between concrete concepts and practical coding, helping students overcome common learning bottlenecks in concrete.",
+      "A comprehensive billing log and financial dashboard for tech founders, developed for the Brex Challenge. Provides clear insights into company financial activities.",
+    image: "/brex_challenge.png",
+    technologies: ["Next.js", "TypeScript"],
+    github: "https://github.com/heyfalheiro1537/PanOptic",
+    external: "https://v0-founder-tech-dashboard.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "Loyal Cards",
+    description:
+      "A full-stack platform that empowers small businesses to create and manage digital loyalty programs through integration with the Google Wallet API. Developed during the Lovable Hackathon.",
+    image: "/loyal-cards.png",
+    technologies: ["Next.js", "Supabase", "TypeScript", "Google Wallet API"],
+    external: "https://loyal-mint-forge.lovable.app/",
+    featured: true,
+  },
+  {
+    title: "Image Labelling System",
+    description:
+      "An intelligent image labeling system designed to streamline the annotation of image datasets. It uses a FastAPI backend for AI-powered suggestions and a Next.js frontend for an intuitive user interface, accelerating the creation of high-quality training data.",
+    image: "/paladium.png",
+    technologies: ["Next.js", "TypeScript", "FastApi"],
+    github: "https://github.com/heyfalheiro1537/Paladium",
+    external: "https://www.loom.com/share/8b3ffe0d60ce42a8bf1bf42b82ce397f",
+    featured: true,
+  },
+
+
+  {
+    title: "Interactive Concrete Design Notebooks",
+    description:
+      "A curated set of interactive notebooks designed to bridge the gap between complex engineering concepts and practical coding, helping students master concrete design principles.",
     image: "/image1.png",
     technologies: ["MatLab", "LiveScript"],
     github: "https://github.com/heyfalheiro1537/Concreto",
@@ -26,15 +56,15 @@ const projects = [
   {
     title: "Arduino Anti-Panic Device",
     description:
-      "Device to support individuals experiencing panic attacks, combining breathing guidance with emergency alert features to assess the need for specialized intervention",
+      "An Arduino-based device to assist individuals during panic attacks by providing guided breathing exercises and an emergency alert system for timely intervention.",
     image: "/search-interface.jpg",
     technologies: ["Arduino", "C++"],
     featured: false,
   },
   {
-    title: "River Forecast MLP",
+    title: "River Flow Forecasting with MLP",
     description:
-      "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and more.",
+      "A machine learning model using a Multi-Layer Perceptron (MLP) to forecast river flow. Developed in Matlab, this project applies neural networks to hydrological data for predictive analysis.",
     image: "/github-profile-dashboard.jpg",
     technologies: ["Matlab"],
     github: "https://github.com/heyfalheiro1537/riverflow-forecast-mlp",
