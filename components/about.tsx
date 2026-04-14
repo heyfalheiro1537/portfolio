@@ -18,18 +18,19 @@ export function About() {
 
                 Alongside being an{" "}
                 <span className="text-accent">engineering student at ITA</span>, I’ve been{" "}
-                <span className="text-accent">president of the school band</span>, started my first{" "}
-                <span className="text-accent">full-time role at VTEX</span> as a field software engineer,
+                <span className="text-accent">president of the school band</span>, worked as a field software engineer at{" "}
+                <span className="text-accent">VTEX</span>,
                 competed in hackathons, volunteered for three years at a prep school for low-income students,
-                and became one of the first developers at{" "}
+                and built LLM-powered products at{" "}
                 <span className="text-accent">Selvia AI Medical Accounting</span>.
               </>
             </p>
             <p>
               <>
-                Today, I’m deeply curious about{" "}
-                <span className="text-accent">how LLMs work</span>—studying algorithms and architectures
-                to push my understanding further and bring new projects to life.
+                Today I’m a{" "}
+                <span className="text-accent">Software Engineer at SumUp</span>, shipping production features in Elixir and Go while deepening my understanding of{" "}
+                <span className="text-accent">distributed systems</span> and{" "}
+                <span className="text-accent">observability</span>.
               </>
             </p>
             <p>
@@ -46,7 +47,11 @@ export function About() {
             <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
-                JavaScript (ES6+)
+                Elixir
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                Go
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
@@ -54,43 +59,39 @@ export function About() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
-                React
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-accent rounded-full"></div>
-                Next.js
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-accent rounded-full"></div>
-                Node.js
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-accent rounded-full"></div>
-                Tailwind CSS
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-1 h-1 bg-accent rounded-full"></div>
                 Python
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
-                SQL
+                Kotlin
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
-                MongoDB
+                React / Next.js
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
-                AWS
+                AWS (Lambda, SQS, SNS)
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
-                LangChain
+                OpenTelemetry
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1 h-1 bg-accent rounded-full"></div>
                 LangGraph
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                SQL / MongoDB
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                JavaScript (ES6+)
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-1 h-1 bg-accent rounded-full"></div>
+                Node.js
               </div>
             </div>
           </div>

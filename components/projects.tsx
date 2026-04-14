@@ -70,6 +70,15 @@ const projects = [
     github: "https://github.com/heyfalheiro1537/riverflow-forecast-mlp",
     featured: false,
   },
+  {
+    title: "Postman API Sync",
+    description:
+      "A CLI tool that synchronizes OpenAPI specs with Postman collections, enabling automated documentation updates and reducing drift between API contracts and Postman workspaces.",
+    image: "/github-profile-dashboard.jpg",
+    technologies: ["TypeScript", "Node.js", "Postman API"],
+    github: "https://github.com/heyfalheiro1537/postman-enricher",
+    featured: false,
+  },
 ]
 
 export function Projects() {

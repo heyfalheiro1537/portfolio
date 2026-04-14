@@ -4,10 +4,18 @@ import { ExternalLink } from "lucide-react"
 const experiences =
   [
     {
+      "period": "Since February 2026",
+      "title": "Software Engineer I Program",
+      "company": "SumUp",
+      "description": "Shipping production features across Elixir and Go from day one. Contributed OTel instrumentation and SLO definition for the PIX key service, managed AWS SQS/SNS pipelines, built a greenfield DDA service for boleto lookup in Elixir, and led a production incident RCA with preventive measures adopted by the team.",
+      "technologies": ["Elixir", "Go", "AWS", "OpenTelemetry"],
+      "link": "https://www.sumup.com/"
+    },
+    {
       "period": "November 2024 — May 2025",
       "title": "Software Engineer Intern",
       "company": "Selvia AI Medical Accounting",
-      "description": "Designed AI-powered agents and automated workflows integrated with WhatsApp and banking systems, improving customer engagement and reducing manual operations by over half.",
+      "description": "Designed AWS Lambda-based architecture and developed LLM-powered agents for automated workflows integrated with WhatsApp and banking systems, enabling intelligent customer engagement and reducing manual operations.",
       "technologies": ["Python", "LangGraph", "AWS", "MongoDB", "TypeScript", "React"],
       "link": "https://www.selvia.com.br/"
     },
@@ -15,7 +23,7 @@ const experiences =
       "period": "July 2023 — June 2024",
       "title": "Field Software Engineer",
       "company": "VTEX Ecommerce Solutions",
-      "description": "Served as a go-to engineer resolving complex issues across 100+ enterprise e-commerce platforms while leading churn-reduction and training initiatives that strengthened client retention and team efficiency.",
+      "description": "Served as a technical lead resolving complex issues across 100+ enterprise e-commerce platforms while leading churn-reduction and training initiatives that strengthened client retention and team efficiency.",
       "technologies": ["Postman", "React", "HTML", "CSS", "Infrastructure"],
       "link": "https://vtex.com/"
     },
